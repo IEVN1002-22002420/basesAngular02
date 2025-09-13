@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basesAngular02';
+  duplicaNumero(numero: number): number{
+    return numero*2;
+  }
+  pelicula={
+    titulo:'batman',
+    anio: new Date(),
+    precio: 2500,
+  }
 }
+
