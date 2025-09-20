@@ -1,3 +1,5 @@
+
+// esto es del otro proyecto
 import { Component } from '@angular/core';
 
 @Component({

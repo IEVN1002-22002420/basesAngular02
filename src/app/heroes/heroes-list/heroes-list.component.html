@@ -1,3 +1,4 @@
+<!-- heroes-list.component.html -->
 <div class="card">
   <div class="card-header">
     <h1>Lista Dragon ball</h1>
@@ -5,18 +6,29 @@
   <div class="card-body">
     <div class="row">
       <div class="col-md-2">Filtrar por:</div>
+
+      <!--
+        Input enlazado con [(ngModel)] a listFilter (two-way binding).
+        Cuando el usuario escribe, 'listFilter' en el componente se actualiza automáticamente.
+        Nota: ngModel requiere FormsModule en app.module.ts.
+      -->
       <div class="col-md-4">
         <input [(ngModel)]="listFilter" type="text" class="form-control" placeholder="filtrar heroe">
       </div>
+
       <div class="row">
         <div class="col-md-6">
+          <!-- Muestra en tiempo real el valor del filtro -->
           <h3>Filtro:{{listFilter}}</h3>
         </div>
       </div>
+
       <div class="table-responsive">
+        <!-- Mostrar la tabla sólo si hay al menos un héroe -->
         <table class="table table-striped" *ngIf="heroes.length>0">
           <thead>
             <tr>
+              <!-- Botón que alterna la visibilidad de las imágenes -->
               <th><button (click)="showImage()" type="button" class="btn btn-primary">{{muestraImg?'Oculta ':'Muestra '}}Imagen</button></th>
               <th>Nombre</th>
               <th>Descripcion</th>
@@ -25,8 +37,20 @@
             </tr>
           </thead>
           <tbody>
+            <!--
+              *ngFor itera sobre la lista filtrada.
+              Aquí se aplica la pipe: heroes | heroesFilter:listFilter
+              - heroesFilter es la pipe que definiste.
+              - listFilter es el argumento que la pipe recibe para filtrar.
+              Resultado: *ngFor recorre sólo los héroes que coinciden con el filtro.
+            -->
             <tr *ngFor="let heroe of heroes | heroesFilter:listFilter">
 
+              <!--
+                *ngIf="muestraImg" => la imagen sólo se renderiza si muestraImg es true.
+                [src]="heroe.imagen " -> binding de la URL de la imagen (nota: tu código original tiene un espacio al final).
+                alt="{{heroe.nombre}}" -> texto alternativo para accesibilidad.
+              -->
               <th><img *ngIf="muestraImg" [src]="heroe.imagen " alt="{{heroe.nombre}}" width="50"></th>
               <th>{{heroe.nombre}}</th>
               <th>{{heroe.descripcion}}</th>
