@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="cinepolis-card">
+
+
+    <div class="seccion entradas">
+      <h3 class="Color-Text">Entradas</h3>
+      <label class="Color-Text">Nombre:</label>
+      <input type="text" [(ngModel)]="nombre" name="nombre">
+
+      <label class="Color-Text">Cantidad Compradores:</label>
+      <input type="number" [(ngModel)]="compradores" name="compradores">
+
+      <label class="Color-Text">Tarjeta Cineco:</label><br>
+      <input class="Color-Text" type="radio" [(ngModel)]="tieneTarjeta" name="tarjeta" value="si"> Sí
+      <input class="Color-Text" type="radio" [(ngModel)]="tieneTarjeta" name="tarjeta" value="no" checked> No
+
+      <label class="Color-Text">Cantidad de Boletas:</label>
+      <input type="number" [(ngModel)]="boletas" name="boletas">
+    </div>
+
+    <div class="seccion salidas">
+      <h3 class="Color-Text">Salidas</h3>
+      <input type="text" [value]="nombre + ' - ' + salida" readonly>
+    </div>
+
+    <div class="seccion acciones">
+      <button (click)="porcentaje4()">Procesar</button>
+      <button (click)="salida=''">Salir</button>
+    </div>
+
+  </div>
+</div>

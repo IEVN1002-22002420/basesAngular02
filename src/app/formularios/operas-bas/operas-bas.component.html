@@ -1,19 +1,16 @@
 <form>
   <div class="col-6">
     <div class="mb-3">
-      <!-- Número 1 -->
       <div class="form-group pt-4">
         <label for="num1" class="form-label">Número 1</label>
         <input type="text" class="form-control" id="num1" [(ngModel)]="num1" name="num1">
       </div>
 
-      <!-- Número 2 -->
       <div class="form-group pt-4">
         <label for="num2" class="form-label">Número 2</label>
         <input type="text" class="form-control" id="num2" [(ngModel)]="num2" name="num2">
       </div>
 
-      <!-- Radios -->
       <div class="form-group pt-4">
         <label>Seleccione operación:</label><br>
         <input type="radio" [(ngModel)]="operacion" name="operacion" value="sumar" checked> Sumar
@@ -22,14 +19,13 @@
         <input type="radio" [(ngModel)]="operacion" name="operacion" value="dividir"> Dividir
       </div>
 
-      <!-- Botón -->
       <div class="form-group">
         <button type="button" class="btn btn-primary mt-3" (click)="calcular()">Calcular</button>
       </div>
     </div>
   </div>
 
-  <!-- Resultado -->
+
   <h1>Resultado: {{ resultado }}</h1>
 </form>
 
