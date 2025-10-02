@@ -1,62 +1,77 @@
-<!--<div class="contenedor">
-  <h2>Código de Colores de Resistencias</h2>
-  <div class="entradas">
-    <label>Color 1:</label>
-    <select [(ngModel)]="color1">
-      <option value="naranja">Naranja</option>
-      <option value="morado">Morado</option>
-      <option value="cafe">Café</option>
-      <option value="rojo">Rojo</option>
-      <option value="amarillo">Amarillo</option>
-      <option value="verde">Verde</option>
-      <option value="azul">Azul</option>
-      <option value="gris">Gris</option>
-      <option value="blanco">Blanco</option>
-      <option value="negro">Negro</option>
-    </select>
+<h2>Calculadora de Resistencias</h2>
 
-    <label>Color 2:</label>
-    <select [(ngModel)]="color2">
-      <option value="naranja">Naranja</option>
-      <option value="morado">Morado</option>
-      <option value="cafe">Café</option>
-      <option value="rojo">Rojo</option>
-      <option value="amarillo">Amarillo</option>
-      <option value="verde">Verde</option>
-      <option value="azul">Azul</option>
-      <option value="gris">Gris</option>
-      <option value="blanco">Blanco</option>
-      <option value="negro">Negro</option>
-    </select>
+<div class="bandas">
 
-    <label>Color 3 (Multiplicador):</label>
-    <select [(ngModel)]="color3">
-      <option value="negro">Negro</option>
-      <option value="marron">Marrón</option>
-      <option value="rojo">Rojo</option>
-      <option value="naranja">Naranja</option>
-      <option value="amarillo">Amarillo</option>
-      <option value="verde">Verde</option>
-      <option value="azul">Azul</option>
-      <option value="violeta">Violeta</option>
-      <option value="gris">Gris</option>
-      <option value="blanco">Blanco</option>
-    </select>
-
-    <label>Tolerancia:</label>
-    <select [(ngModel)]="tolerancia">
-      <option value="dorado">Dorado 5%</option>
-      <option value="plata">Plata 10%</option>
-    </select>
-
-    <button (click)="calcular()">Calcular</button>
+  <div>
+    <h3>Banda 1</h3>
+    <label style="color:black;"><input type="radio" name="banda1" [(ngModel)]="ohms.banda1" [value]="0"> Negro</label>
+    <label style="color:brown;"><input type="radio" name="banda1" [(ngModel)]="ohms.banda1" [value]="1"> Marrón</label>
+    <label style="color:red;"><input type="radio" name="banda1" [(ngModel)]="ohms.banda1" [value]="2"> Rojo</label>
+    <label style="color:orange;"><input type="radio" name="banda1" [(ngModel)]="ohms.banda1" [value]="3"> Naranja</label>
+    <label style="color:yellow;"><input type="radio" name="banda1" [(ngModel)]="ohms.banda1" [value]="4"> Amarillo</label>
+    <label style="color:green;"><input type="radio" name="banda1" [(ngModel)]="ohms.banda1" [value]="5"> Verde</label>
+    <label style="color:blue;"><input type="radio" name="banda1" [(ngModel)]="ohms.banda1" [value]="6"> Azul</label>
+    <label style="color:violet;"><input type="radio" name="banda1" [(ngModel)]="ohms.banda1" [value]="7"> Violeta</label>
+    <label style="color:gray;"><input type="radio" name="banda1" [(ngModel)]="ohms.banda1" [value]="8"> Gris</label>
+    <label style="color:white; background:black; padding:2px 5px;"><input type="radio" name="banda1" [(ngModel)]="ohms.banda1" [value]="9"> Blanco</label>
   </div>
 
-  <div class="salidas">
-    <h3>Resultados</h3>
-    <p>Valor: {{ valor }}</p>
-    <p>Valor Máximo: {{ valorMax }}</p>
-    <p>Valor Mínimo: {{ valorMin }}</p>
+
+  <div>
+    <h3>Banda 2</h3>
+    <label style="color:black;"><input type="radio" name="banda2" [(ngModel)]="ohms.banda2" [value]="0"> Negro</label>
+    <label style="color:brown;"><input type="radio" name="banda2" [(ngModel)]="ohms.banda2" [value]="1"> Marrón</label>
+    <label style="color:red;"><input type="radio" name="banda2" [(ngModel)]="ohms.banda2" [value]="2"> Rojo</label>
+    <label style="color:orange;"><input type="radio" name="banda2" [(ngModel)]="ohms.banda2" [value]="3"> Naranja</label>
+    <label style="color:yellow;"><input type="radio" name="banda2" [(ngModel)]="ohms.banda2" [value]="4"> Amarillo</label>
+    <label style="color:green;"><input type="radio" name="banda2" [(ngModel)]="ohms.banda2" [value]="5"> Verde</label>
+    <label style="color:blue;"><input type="radio" name="banda2" [(ngModel)]="ohms.banda2" [value]="6"> Azul</label>
+    <label style="color:violet;"><input type="radio" name="banda2" [(ngModel)]="ohms.banda2" [value]="7"> Violeta</label>
+    <label style="color:gray;"><input type="radio" name="banda2" [(ngModel)]="ohms.banda2" [value]="8"> Gris</label>
+    <label style="color:white; background:black; padding:2px 5px;"><input type="radio" name="banda2" [(ngModel)]="ohms.banda2" [value]="9"> Blanco</label>
   </div>
 
-</div>-->
+
+  <div>
+    <h3>Banda 3 (Multiplicador)</h3>
+    <label style="color:black;"><input type="radio" name="banda3" [(ngModel)]="ohms.banda3" [value]="1"> x1</label>
+    <label style="color:brown;"><input type="radio" name="banda3" [(ngModel)]="ohms.banda3" [value]="10"> x10</label>
+    <label style="color:red;"><input type="radio" name="banda3" [(ngModel)]="ohms.banda3" [value]="100"> x100</label>
+    <label style="color:orange;"><input type="radio" name="banda3" [(ngModel)]="ohms.banda3" [value]="1000"> x1000</label>
+    <label style="color:yellow;"><input type="radio" name="banda3" [(ngModel)]="ohms.banda3" [value]="10000"> x10000</label>
+    <label style="color:green;"><input type="radio" name="banda3" [(ngModel)]="ohms.banda3" [value]="100000"> x100000</label>
+    <label style="color:blue;"><input type="radio" name="banda3" [(ngModel)]="ohms.banda3" [value]="1000000"> x1000000</label>
+    <label style="color:violet;"><input type="radio" name="banda3" [(ngModel)]="ohms.banda3" [value]="10000000"> x10000000</label>
+    <label style="color:gray;"><input type="radio" name="banda3" [(ngModel)]="ohms.banda3" [value]="100000000"> x100000000</label>
+  </div>
+
+  <div>
+    <h3>Tolerancia</h3>
+    <label style="color:gold;"><input type="radio" name="tolerancia" [(ngModel)]="ohms.tolerancia" [value]="0.05"> Dorado (5%)</label>
+    <label style="color:silver;"><input type="radio" name="tolerancia" [(ngModel)]="ohms.tolerancia" [value]="0.1"> Plateado (10%)</label>
+  </div>
+</div>
+
+<div>
+  <button (click)="calcular()">Calcular</button>
+  <table border="1" style="margin-top:20px; border-collapse: collapse;">
+  <tr>
+    <th>Banda 1</th>
+    <th>Banda 2</th>
+    <th>Banda 3</th>
+    <th>Tolerancia</th>
+    <th>Valor</th>
+    <th>Mínimo</th>
+    <th>Máximo</th>
+  </tr>
+  <tr>
+    <td [style.background-color]="colorBanda1">{{ohms.color1}}</td>
+    <td [style.background-color]="colorBanda2">{{ohms.color2}}</td>
+    <td [style.background-color]="colorBanda3">{{ohms.color3}}</td>
+    <td [style.background-color]="colorTolerancia">{{ohms.colorTol}}</td>
+    <td>{{resultado}}</td>
+    <td>{{minimo}}</td>
+    <td>{{maximo}}</td>
+  </tr>
+</table>
+</div>

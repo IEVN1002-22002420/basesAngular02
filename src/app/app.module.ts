@@ -13,6 +13,7 @@ import { OperasBasComponent } from './formularios/operas-bas/operas-bas.componen
 import { CinepolisComponent } from './formularios/cinepolis/cinepolis.component';
 import { CalcularOhmsComponent } from './formularios/calcular-ohms/calcular-ohms.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { CalcularOhmsComponent } from './formularios/calcular-ohms/calcular-ohms
     HeroesFilterPipe,
     OperasBasComponent,
     CinepolisComponent,
-    CalcularOhmsComponent // la pipe debe estar declarada para poder usarse en templates
+    CalcularOhmsComponent,
+    // la pipe debe estar declarada para poder usarse en templates
   ],
   imports: [
     BrowserModule,

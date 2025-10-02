@@ -31,7 +31,7 @@ export class OperasBasComponent {
 
 
   dividir(): void {
-    
+
     if (parseFloat(this.num2) === 0) {
       this.resultado = "No se puede dividir entre 0";
       return;
